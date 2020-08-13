@@ -14,7 +14,13 @@ client.on("ready", () => {
 });
 
 client.on("message", async (message) => {
+  if (message.author.bot) return;
+  if (message.channel.type == "dm") return;
   if (message.content == "-c dance") {
+    const attachment = new Discord.MessageAttachment("./assets/dance.gif");
+    message.channel.send(attachment);
+  }
+  if (message.contenr == "-c a") {
     
   }
 });
